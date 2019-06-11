@@ -4,7 +4,9 @@ Clinic check in management system using Vue and Laravel. Cross platform integrat
 
 ## Prerequisite
 
+Laravel Required:<br/>
 REQUIREMENTS FOR Laravel 5.8, for reference see https://laravel.com/docs/5.8/installation
+Quasar Required:<br/>
 REQUIREMENT FOR Quasar , for reference see https://quasar.dev/quasar-cli/installation
 
 ## Deploy back-end for apis
