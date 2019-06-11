@@ -1,6 +1,15 @@
-#Web
+## npm
+
+npm install
+
+## Web
+
 quasar dev
-#Android
+
+## Android
+
 quasar build -m cordova -T android
-#IOS
+
+# IOS
+
 quasar build -m cordova -T ios
