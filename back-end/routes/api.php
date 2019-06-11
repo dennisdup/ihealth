@@ -17,9 +17,19 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+//get all data for user and app load
 Route::get('/user', 'DepartmentController@getUser');
-
+//generating dummy content
 Route::get('/staffgenerate', 'DepartmentController@populateStaff');
 Route::get('/patientsgenerate', 'DepartmentController@populatePatients');
+//get patient
+Route::get('/getpatient/{cardnumber}', 'DepartmentController@getPatient');
+// Get all vistis
+Route::get('/visits', 'DepartmentController@getVisits');
 
-Route::post('/patientsgenerate', 'DepartmentController@authenticate');
+//post requests
+
+//Register check in 
+Route::post('/book', 'DepartmentController@bookPatient');
+
+

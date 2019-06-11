@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
+
 class DepartmentController extends Controller
 {
     public function index(){
@@ -24,7 +25,8 @@ class DepartmentController extends Controller
         ->where('staff.staffid', 28)
         ->get();
         $departments = DB::table('departments')->get();
-        $results = array( 'user'=>$userdata,'departments'=>$departments );
+        $staffs = DB::table('staff')->get();
+        $results = array( 'user'=>$userdata,'departments'=>$departments,'staffs'=>$staffs );
         echo json_encode($results);
     }
 
@@ -68,9 +70,56 @@ class DepartmentController extends Controller
 
     public function visitsPopulate(){
         $patients = DB::table('patients')->get();
-
     }
 
+    public function getPatient($cardnumber){
+        $results = [];
+        $userdata = DB::table('patients') 
+        ->where('cardnumber', $cardnumber)
+        ->get();
+        $results = array( 'patient'=>$userdata );
+        echo json_encode($results);
+    }
+    public function bookPatient(Request $request){
+        $patientid = $request->input('patientid');
+        $deptid = $request->input('deptid');
+        $staffid = $request->input('staffid');
+        $notes = $request->input('notes');
+        $receptionid = $request->input('receptionid');
+        DB::table('visits')->insert(
+            [
+            'patientid' => $patientid,
+            'deptid' => $deptid,
+            'notes' => $notes,
+            'receptionid' => $receptionid,
+            'status' => '1'
+            ]
+        );    
+        $visitid = DB::getPdo()->lastInsertId();;   
+        DB::table('treatments')->insert(
+            [
+            'visitid' => $visitid,
+            'patientid' => $patientid,
+            'staffid' => $staffid,
+            'deptid' => $deptid,
+            'referralid' => $receptionid,
+            'docnotes' => '',
+            'first-stop' => '1'
+            ]
+        );    
+        $treatmentid = DB::getPdo()->lastInsertId();;   
+        echo json_encode( array('treatmentid'=>$treatmentid, 'visitid'=>$visitid ) );
+    }
+    public function getVisits(){
+        $results = [];
+        $visitdata = DB::table('visits') 
+        ->join('patients', 'visits.patientid', '=', 'patients.patientid')
+        ->join('staff', 'visits.receptionid', '=', 'staff.staffid')
+        ->select('patients.name as patientname','patients.cardnumber', 'staff.staffname','visits.notes','visits.visitid')
+        ->get();
+        $results = array( 'visits'=>$visitdata);
+        echo json_encode($results);
+    }
     public function getName(){
         $session = curl_init();
         curl_setopt($session, CURLOPT_URL, "https://randomuser.me/api/?results=5000&nat=us");
