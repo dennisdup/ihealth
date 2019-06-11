@@ -25,7 +25,7 @@ REQUIREMENTS FOR Cordova, https://cordova.apache.org/docs/en/latest/guide/platfo
 ## Mobile IOS
 
 Xcode Required<br/>
-REQUIREMENTS FOR Cordova, https://developer.apple.com/xcode/
+REQUIREMENTS FOR Xcode, https://developer.apple.com/xcode/
 
 ## Demo
 
