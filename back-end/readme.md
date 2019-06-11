@@ -1,8 +1,6 @@
 ## API for ihealth
 
-```
-php artisan serve
-```
+
 ## Update Composer Dependencies
 
 ## Update NPM Dependencies
@@ -11,3 +9,9 @@ php artisan serve
 
 Configurations in .env</br>
 MYSQL Dumb available in /back-end/ihealth.sql
+
+
+## Deploy 
+```
+php artisan serve
+```
