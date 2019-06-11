@@ -15,14 +15,24 @@ Instructions for back-end /back-end/README
 
 Instructions for loading the application /front-end/README
 
-##Mobile - ANDROID
+## Mobile ANDROID
+
 Cordova Required.
 REQUIREMENTS FOR Cordova, for reference see https://cordova.apache.org/docs/en/latest/guide/platforms/android/
 
-##Mobile - IOS
+## Mobile IOS
+
 Xcode Required
 REQUIREMENTS FOR Cordova, https://developer.apple.com/xcode/
 
 ## Demo
 
 https://www.dropbox.com/s/p9taar5exmx4i0t/ihealth.ogv?dl=0
+
+## DB Structure Brief
+
+departments - all departments
+patients - all patients
+staff - all medic practitioners
+visits - records when a patient check-in to hospital
+treatments - records when a patient records a visit to a medici practitioner
