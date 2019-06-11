@@ -3,6 +3,9 @@
 ```
 php artisan serve
 ```
+## Update Composer Dependencies
+
+## Update NPM Dependencies
 
 ## DB
 
