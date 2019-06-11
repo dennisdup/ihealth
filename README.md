@@ -35,4 +35,4 @@ departments - all departments<br/>
 patients - all patients<br/>
 staff - all medic practitioners<br/>
 visits - records when a patient check-in to hospital<br/>
-treatments - records when a patient records a visit to a medici practitioner
+treatments - records when a patient records a visit to a medic practitioner
