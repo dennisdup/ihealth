@@ -106,7 +106,6 @@ export default {
       let $this = this;
       $this.selectedStaff = "";
       $this.reasonVisit = "";
-      console.log("dept", val);
       $this.staff.forEach(function(staff) {
         if (staff.deptid == val.value) {
           $this.staffDeptList.push({

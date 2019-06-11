@@ -110,6 +110,26 @@ class DepartmentController extends Controller
         $treatmentid = DB::getPdo()->lastInsertId();;   
         echo json_encode( array('treatmentid'=>$treatmentid, 'visitid'=>$visitid ) );
     }
+    public function recordTreatment(Request $request){
+        $visitid = $request->input('visitid');
+        $patientid = $request->input('patientid');
+        $deptid = $request->input('deptid');
+        $staffid = $request->input('staffid');
+        $referralid = $request->input('staffid');
+        DB::table('treatments')->insert(
+            [
+            'visitid' => $visitid,
+            'patientid' => $patientid,
+            'staffid' => $staffid,
+            'deptid' => $deptid,
+            'referralid' => $receptionid,
+            'docnotes' => '',
+            'first-stop' => '0'
+            ]
+        );    
+        $treatmentid = DB::getPdo()->lastInsertId();;   
+        echo json_encode( array('treatmentid'=>$treatmentid ) );
+    }
     public function getVisits(){
         $results = [];
         $visitdata = DB::table('visits') 

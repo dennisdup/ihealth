@@ -31,5 +31,8 @@ Route::get('/visits', 'DepartmentController@getVisits');
 
 //Register check in 
 Route::post('/book', 'DepartmentController@bookPatient');
+//Register next patiets visit to next medic/dept
+Route::post('/treament', 'DepartmentController@recordTreatment');
+
 
 
