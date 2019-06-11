@@ -6,5 +6,5 @@ php artisan serve
 
 ## DB
 
-Configurations in .env
+Configurations in .env</br>
 MYSQL Dumb available in /back-end/ihealth.sql
