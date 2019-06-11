@@ -17,12 +17,12 @@ Instructions for loading the application /front-end/README
 
 ## Mobile ANDROID
 
-Cordova Required.
-REQUIREMENTS FOR Cordova, for reference see https://cordova.apache.org/docs/en/latest/guide/platforms/android/
+Cordova Required.<br/>
+REQUIREMENTS FOR Cordova, https://cordova.apache.org/docs/en/latest/guide/platforms/android/
 
 ## Mobile IOS
 
-Xcode Required
+Xcode Required<br/>
 REQUIREMENTS FOR Cordova, https://developer.apple.com/xcode/
 
 ## Demo
