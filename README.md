@@ -1,6 +1,6 @@
 # ihealth
 
-Clinic check in management system using vue and laravel. Cross platform integration using quasar.
+Clinic check in management system using Vue and Laravel. Cross platform integration using quasar.
 
 ## Prerequisite
 
