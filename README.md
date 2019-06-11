@@ -31,8 +31,8 @@ https://www.dropbox.com/s/p9taar5exmx4i0t/ihealth.ogv?dl=0
 
 ## DB Structure Brief
 
-departments - all departments
-patients - all patients
-staff - all medic practitioners
-visits - records when a patient check-in to hospital
+departments - all departments<br/>
+patients - all patients<br/>
+staff - all medic practitioners<br/>
+visits - records when a patient check-in to hospital<br/>
 treatments - records when a patient records a visit to a medici practitioner
