@@ -1,8 +1,8 @@
 # ihealth
 
-Clinic check in management system using vue and laravel. Cross platform integration
+Clinic check in management system using vue and laravel. Cross platform integration using quasar.
 
-## Preliquisite
+## Prerequisite
 
 REQUIREMENTS FOR Laravel 5.8, for reference see https://laravel.com/docs/5.8/installation
 REQUIREMENT FOR Quasar , for reference see https://quasar.dev/quasar-cli/installation
@@ -18,3 +18,7 @@ Instructions for loading the application /front-end/README
 ##Mobile - ANDROID
 Cordova Required.
 REQUIREMENTS FOR Cordova, for reference see https://cordova.apache.org/docs/en/latest/guide/platforms/android/
+
+##Mobile - IOS
+Xcode Required
+REQUIREMENTS FOR Cordova, https://developer.apple.com/xcode/
